@@ -54,7 +54,7 @@ export function useAudio() {
 
               // Create a simple distortion effect
               const distortion = audioContext.createWaveShaper();
-              function makeDistortionCurve(amount = 50) {
+              const makeDistortionCurve = (amount = 50) => {
                 const k = typeof amount === "number" ? amount : 50;
                 const n_samples = 44100;
                 const curve = new Float32Array(n_samples);
@@ -66,7 +66,7 @@ export function useAudio() {
                     ((3 + k) * x * 20 * deg) / (Math.PI + k * Math.abs(x));
                 }
                 return curve;
-              }
+              };
 
               distortion.curve = makeDistortionCurve(200);
               distortion.oversample = "4x";
