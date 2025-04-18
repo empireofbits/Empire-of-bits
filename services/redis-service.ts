@@ -1,4 +1,3 @@
-// Store wallet address in Redis using API route
 export async function storeWalletInRedis(walletAddress: string): Promise<boolean> {
     try {
       const response = await fetch("/api/redis", {

@@ -13,7 +13,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler", // 🔥 Changed this line
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -34,7 +34,7 @@
     ],
     "types": [
       "tailwindcss"
-    ] // ✅ Added this
+    ]
   },
   "include": [
     "next-env.d.ts",

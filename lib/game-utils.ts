@@ -18,15 +18,12 @@ export function isValidPlacement(
   size: number,
   orientation: "horizontal" | "vertical"
 ): boolean {
-  // Check if ship is within board boundaries
   if (orientation === "horizontal") {
     if (col + size > 10) return false;
   } else {
     if (row + size > 10) return false;
   }
 
-  // Check if there's no overlap with other ships
-  // Also check adjacent cells (ships can't touch)
   for (
     let r = Math.max(0, row - 1);
     r <= Math.min(9, orientation === "vertical" ? row + size : row + 1);
@@ -58,15 +55,12 @@ export function placeShipsRandomly(board: Cell[][], ships: Ship[]) {
     while (!placed && attempts < maxAttempts) {
       attempts++;
 
-      // Randomly choose orientation
       const orientation = Math.random() > 0.5 ? "horizontal" : "vertical";
 
-      // Randomly choose position
       const row = Math.floor(Math.random() * 10);
       const col = Math.floor(Math.random() * 10);
 
       if (isValidPlacement(newBoard, row, col, newShips[i].size, orientation)) {
-        // Place the ship
         for (let j = 0; j < newShips[i].size; j++) {
           const r = orientation === "horizontal" ? row : row + j;
           const c = orientation === "horizontal" ? col + j : col;
@@ -87,7 +81,6 @@ export function placeShipsRandomly(board: Cell[][], ships: Ship[]) {
       }
     }
 
-    // If we couldn't place a ship after max attempts, reset and try again
     if (!placed) {
       return placeShipsRandomly(generateEmptyBoard(), ships);
     }
