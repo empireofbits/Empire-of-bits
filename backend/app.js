@@ -66,17 +66,6 @@ app.use(
 //Serving static files
 app.use(express.static(`${__dirname}/public`));
 
-//Below Creating our own middleware , here (req,res,next) is function which we want to add in our middleware stack
-//(req,res,next)->in each middleware function we have access to req,res(request and response) but here also we have the next function(it is always the third argument) due to this format express know we are defining the middleware here
-
-// app.use((req, res, next) => {
-//   //it will run each time there is some new request
-//   console.log('hello from the middleware!!');
-
-//   //Important->We have to call the next function,if we dont call next() then (req,res) request and response cycle will be stuck at this point means we would never able to send back a response to the client
-//   next();
-// });
-
 //Test middleware
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
@@ -92,6 +81,7 @@ app.use('/api/v1/games/candycrush', candyCrushRoutes);
 app.use('/api/v1/games/battleship', battleshipRoutes);
 app.use('/api/v1/games/spaceinvaders', spaceInvadersRoutes);
 app.use('/api/v1/games/platformer', platformerRoutes);
+
 //Implimenting a route handler that was not cached by any of other route handlers like above route handlers
 //all middlewares function are executed in the order they are in the code
 //IMP->So according to above statement if we have a request that makes it into current point of code where i am writing this that means neither the tourRouter and userRouter just above not able to catch it.

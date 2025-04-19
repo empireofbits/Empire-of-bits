@@ -25,12 +25,24 @@ const CandyCrushLevelSchema = new mongoose.Schema({
     required: true,
     default: 5000,
   },
+  attempts: {
+    type: Number,
+    default: 0,
+  },
+  bestScore: {
+    type: Number,
+    default: 0,
+  },
+  timeSpent: {
+    type: Number,
+    default: 0,
+  },
 });
 
 const CandyCrushSchema = new mongoose.Schema(
   {
     userId: {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: 'User',
     },
@@ -43,18 +55,38 @@ const CandyCrushSchema = new mongoose.Schema(
       default: 1,
     },
     levels: [CandyCrushLevelSchema],
-    createdAt: {
+    lastPlayed: {
       type: Date,
       default: Date.now,
     },
-    updatedAt: {
-      type: Date,
-      default: Date.now,
+    totalPlayTime: {
+      type: Number,
+      default: 0,
+    },
+    livesRemaining: {
+      type: Number,
+      default: 5,
+      max: 5,
+    },
+    dailyBonus: {
+      type: Boolean,
+      default: false,
     },
   },
-  {
-    timestamps: true,
+  { 
+    timestamps: true, 
   },
 );
 
-module.exports = mongoose.model('candycrush', CandyCrushSchema);
+// Method to calculate total stars
+CandyCrushSchema.methods.getTotalStars = function() {
+  return this.levels.reduce((total, level) => total + level.stars, 0);
+};
+
+// Method to get progress percentage
+CandyCrushSchema.methods.getProgressPercentage = function() {
+  const clearedLevels = this.levels.filter(level => level.cleared).length;
+  return (clearedLevels / this.levels.length) * 100;
+};
+
+module.exports = mongoose.model('CandyCrush', CandyCrushSchema);

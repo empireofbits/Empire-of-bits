@@ -1,4 +1,4 @@
-const CandyCrush = require('../models/candyCrush');
+const CandyCrush = require('../models/CandyCrush');  // Make sure this matches your filename exactly
 const User = require('../models/User');
 const { ErrorResponse } = require('../utils/errorHandler');
 const mongoose = require('mongoose');
