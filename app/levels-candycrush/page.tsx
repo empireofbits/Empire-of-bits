@@ -26,7 +26,7 @@ export default function LevelsPage() {
     const fetchGameData = async () => {
       try {
         // Replace with your actual userId or get it from your auth system
-        const userId = "wallet-address-here"; // You should replace this with your actual user ID
+        const userId = localStorage.getItem("walletAddress"); // You should replace this with your actual user ID
 
         // First, try to get existing game data
         const response = await fetch(
