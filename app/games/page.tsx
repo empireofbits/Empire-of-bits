@@ -125,7 +125,7 @@ export default function GamesPage() {
       prize: 0.3,
       players: 0,
       status: "live",
-      route: "/coming-soon",
+      route: "https://car.empireofbits.fun/",
     },
     {
       id: 5,
