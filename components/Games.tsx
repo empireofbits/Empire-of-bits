@@ -45,7 +45,7 @@ export default function Games() {
       try {
         // Get game data to get this level's target score
         const response = await fetch(
-          "http://127.0.0.1:3001/api/v1/games/candycrush",
+          "https://backend.empireofbits.fun/api/v1/games/candycrush",
           {
             method: "POST",
             headers: {
@@ -167,7 +167,7 @@ export default function Games() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:3001/api/v1/games/candycrush/${userId}/level`,
+        `https://backend.empireofbits.fun/api/v1/games/candycrush/${userId}/level`,
         {
           method: "PUT",
           headers: {

@@ -99,7 +99,7 @@ export default function ProfilePage() {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://127.0.0.1:3001/api/v1/users/${userId}/games`
+        `https://backend.empireofbits.fun/api/v1/users/${userId}/games`
       );
       const data = await response.json();
       setGameData(data);

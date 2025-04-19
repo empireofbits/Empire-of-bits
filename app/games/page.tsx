@@ -77,7 +77,7 @@ export default function GamesPage() {
       prize: 0.15,
       players: 2,
       status: "live",
-      route: "http://localhost:4000/",
+      route: "https://battleship.empireofbits.fun/",
     },
     {
       id: 3,
@@ -89,7 +89,7 @@ export default function GamesPage() {
       prize: 0.12,
       players: 1,
       status: "waiting",
-      route: "http://localhost:4001/",
+      route: "https://spaceinvader.empireofbits.fun/",
     },
     {
       id: 4,
@@ -113,7 +113,7 @@ export default function GamesPage() {
       prize: 0.3,
       players: 3,
       status: "live",
-      route: "http://localhost:5173/",
+      route: "https://axes.empireofbits.fun/",
     },
     {
       id: 78,
@@ -125,7 +125,7 @@ export default function GamesPage() {
       prize: 0.3,
       players: 0,
       status: "live",
-      route: "http://127.0.0.1:8080/rctimetrial/v5/",
+      route: "/coming-soon",
     },
     {
       id: 5,
