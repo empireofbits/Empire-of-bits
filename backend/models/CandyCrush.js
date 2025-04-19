@@ -42,7 +42,7 @@ const CandyCrushLevelSchema = new mongoose.Schema({
 const CandyCrushSchema = new mongoose.Schema(
   {
     userId: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: String,
       required: true,
       ref: 'User',
     },
@@ -73,19 +73,19 @@ const CandyCrushSchema = new mongoose.Schema(
       default: false,
     },
   },
-  { 
-    timestamps: true, 
+  {
+    timestamps: true,
   },
 );
 
 // Method to calculate total stars
-CandyCrushSchema.methods.getTotalStars = function() {
+CandyCrushSchema.methods.getTotalStars = function () {
   return this.levels.reduce((total, level) => total + level.stars, 0);
 };
 
 // Method to get progress percentage
-CandyCrushSchema.methods.getProgressPercentage = function() {
-  const clearedLevels = this.levels.filter(level => level.cleared).length;
+CandyCrushSchema.methods.getProgressPercentage = function () {
+  const clearedLevels = this.levels.filter((level) => level.cleared).length;
   return (clearedLevels / this.levels.length) * 100;
 };
 
