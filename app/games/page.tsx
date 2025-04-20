@@ -201,7 +201,7 @@ export default function GamesPage() {
 
       // Make API call to your backend
       const response = await fetch(
-        "hhttps://backend1.empireofbits.fun/api/v1/users",
+        "https://backend1.empireofbits.fun/api/v1/users",
         {
           method: "POST",
           headers: {
