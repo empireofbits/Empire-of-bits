@@ -498,10 +498,10 @@ export default function Home() {
                   <div className="flex justify-between items-center mb-4">
                     <span className="flex items-center text-lg">
                       <Image
-                        src="/eth.png"
+                        src="/sol.png"
                         width={20}
                         height={20}
-                        alt="ETH"
+                        alt="Sol"
                         className="mr-2"
                       />
                       SOL Balance

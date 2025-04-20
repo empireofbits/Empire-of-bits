@@ -635,7 +635,7 @@ export default function ProfilePage() {
             className="text-xs text-gray-400 mt-8 text-center border-t border-white pt-4"
           >
             <TerminalText
-              text={["© 2025 TERMINAL ARCADE • ALL RIGHTS RESERVED"]}
+              text={["©️ 2025 TERMINAL ARCADE • ALL RIGHTS RESERVED"]}
               typing={false}
             />
           </motion.div>
