@@ -510,7 +510,7 @@ export default function GamesPage() {
           </h1>
 
           {/* Wallet Section */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 h-28">
             {/* Points Display and Buttons */}
             <div className="hidden md:flex items-center gap-2 bg-gray-900 p-2 border-3 border-white rounded-lg">
               <div className="flex items-center">
@@ -525,7 +525,7 @@ export default function GamesPage() {
                   <span className="text-base font-bold">{points}</span>
                 </div>
 
-                <div className="flex space-x-2">
+                {/* <div className="flex space-x-2">
                   <motion.button
                     className="px-3 py-1 bg-green-600 text-white text-sm font-bold rounded-md"
                     whileHover={{ scale: 1.05 }}
@@ -551,7 +551,7 @@ export default function GamesPage() {
                   >
                     SELL
                   </motion.button>
-                </div>
+                </div> */}
               </div>
             </div>
 
