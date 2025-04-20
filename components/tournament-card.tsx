@@ -71,7 +71,7 @@ export function TournamentCard({
               <Coins className="h-4 w-4 mr-2" />
               ENTRY FEE
             </div>
-            <div className="text-2xl font-bold">{tournament.entryFee} ETH</div>
+            <div className="text-2xl font-bold">{tournament.entryFee} SOL</div>
           </div>
 
           <div className="bg-secondary p-4 border-2 border-foreground/20">
