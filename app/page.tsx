@@ -455,7 +455,7 @@ export default function Home() {
                 GAMES
               </Link>
               <Link
-                href="/tournaments"
+                href="/coming-soon"
                 className="py-5 border-b-2 border-foreground/20 text-2xl font-bold"
                 onClick={() => {
                   setMenuOpen(false);
@@ -714,7 +714,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <Link href="/tournaments">
+                <Link href="/coming-soon">
                   <AnimatedButton
                     className="bg-transparent text-foreground px-12 py-5 text-2xl font-bold border-4 border-foreground relative overflow-hidden group"
                     onClick={() => playSound("click")}
@@ -899,7 +899,7 @@ export default function Home() {
                   </div>
 
                   <div className="text-center mt-12">
-                    <Link href="/tournaments">
+                    <Link href="/coming-soon">
                       <AnimatedButton
                         className="text-lg border-3 border-foreground px-8 py-4 hover:border-[hsl(var(--accent-yellow))] hover:text-[hsl(var(--accent-yellow))]"
                         onHover={() => playSound("hover")}

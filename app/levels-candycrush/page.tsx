@@ -30,7 +30,7 @@ export default function LevelsPage() {
 
         // First, try to get existing game data
         const response = await fetch(
-          "https://backend.empireofbits.fun/api/v1/games/candycrush",
+          "https://backend1.empireofbits.fun/api/v1/games/candycrush",
           {
             method: "POST",
             headers: {

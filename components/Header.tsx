@@ -100,7 +100,7 @@ export default function Header({
   ) => {
     try {
       const response = await fetch(
-        `https://backend.empireofbits.fun/api/v1/users/${userId}/points`,
+        `https://backend1.empireofbits.fun/api/v1/users/${userId}/points`,
         {
           method: "PUT",
           headers: {
@@ -139,15 +139,18 @@ export default function Header({
       console.log("Wallet Address:", walletAddress);
 
       // Make API call to your backend
-      const response = await fetch("https://backend.empireofbits.fun/api/v1/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userId: walletAddress,
-        }),
-      });
+      const response = await fetch(
+        "https://backend1.empireofbits.fun/api/v1/users",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userId: walletAddress,
+          }),
+        }
+      );
 
       const data = await response.json();
       console.log(data);

@@ -201,7 +201,7 @@ export default function GamesPage() {
 
       // Make API call to your backend
       const response = await fetch(
-        "https://backend.empireofbits.fun/api/v1/users",
+        "hhttps://backend1.empireofbits.fun/api/v1/users",
         {
           method: "POST",
           headers: {
@@ -234,7 +234,7 @@ export default function GamesPage() {
   ) => {
     try {
       const response = await fetch(
-        `https://backend.empireofbits.fun/api/v1/users/${userId}/points`,
+        `https://backend1.empireofbits.fun/api/v1/users/${userId}/points`,
         {
           method: "PUT",
           headers: {

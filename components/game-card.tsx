@@ -94,7 +94,7 @@ export function GameCard({ game, onHover, onClick }: GameCardProps) {
           </div>
         </div>
 
-        <Link href={`/games/${game.id}`}>
+        <Link href={`coming-soon`}>
           <AnimatedButton
             className={`arcade-btn bg-[hsl(var(--accent-purple))] text-white px-5 py-3 w-full border-3 border-[hsl(var(--accent-purple)/0.7)] hover:bg-[hsl(var(--accent-purple)/0.9)] transition-colors text-lg`}
           >

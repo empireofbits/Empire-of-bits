@@ -18,7 +18,7 @@ interface GameData {
   success: boolean;
   userId: string;
   games: {
-    candycrush: {
+    CandyCrush: {
       totalPoints: number;
       currentLevel: number;
       levels: {
@@ -99,17 +99,18 @@ export default function ProfilePage() {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://backend.empireofbits.fun/api/v1/users/${userId}/games`
+        `https://backend1.empireofbits.fun/api/v1/users/${userId}/games`
       );
       const data = await response.json();
+      console.log("Game data fetched:", data);
       setGameData(data);
 
       // Calculate total points across all games
       let points = 0;
-      if (data.games.candycrush) points += data.games.candycrush.totalPoints;
-      if (data.games.battleship) points += data.games.battleship.totalPoints;
-      if (data.games.spaceinvaders)
-        points += data.games.spaceinvaders.totalPoints;
+      if (data.games?.candycrush) points += data.games?.candycrush?.totalPoints;
+      if (data.games?.battleship) points += data.games?.battleship?.totalPoints;
+      if (data.games?.spaceinvaders)
+        points += data.games?.spaceinvaders?.totalPoints;
       setTotalPoints(data.userId.points);
 
       setIsLoading(false);
@@ -316,14 +317,14 @@ export default function ProfilePage() {
                         <h3 className="text-lg text-white font-mono mb-2 border-b border-white pb-1">
                           CANDY CRUSH
                         </h3>
-                        {gameData?.games.candycrush ? (
+                        {gameData?.games.CandyCrush ? (
                           <div className="space-y-2">
                             <div className="flex justify-between">
                               <span className="text-xs text-gray-300">
                                 LEVEL
                               </span>
                               <span className="text-xs text-white">
-                                {gameData.games.candycrush.currentLevel}
+                                {gameData.games.CandyCrush.currentLevel}
                               </span>
                             </div>
                             <div className="flex justify-between">
@@ -332,7 +333,7 @@ export default function ProfilePage() {
                               </span>
                               <span className="text-xs text-white">
                                 {formatNumber(
-                                  gameData.games.candycrush.totalPoints
+                                  gameData.games.CandyCrush.totalPoints
                                 )}
                               </span>
                             </div>
@@ -346,17 +347,17 @@ export default function ProfilePage() {
                                     <Star
                                       key={i}
                                       className={`h-3 w-3 ${
-                                        gameData.games.candycrush &&
+                                        gameData.games.CandyCrush &&
                                         i <
-                                          (gameData.games.candycrush.levels[0]
+                                          (gameData.games.CandyCrush.levels[0]
                                             ?.stars || 0)
                                           ? "text-white"
                                           : "text-gray-600"
                                       }`}
                                       fill={
-                                        gameData.games.candycrush &&
+                                        gameData.games.CandyCrush &&
                                         i <
-                                          (gameData.games.candycrush.levels[0]
+                                          (gameData.games.CandyCrush.levels[0]
                                             ?.stars || 0)
                                           ? "currentColor"
                                           : "none"
@@ -370,9 +371,9 @@ export default function ProfilePage() {
                                   className="absolute top-0 left-0 h-full bg-white"
                                   style={{
                                     width: `${
-                                      (gameData.games.candycrush.levels[0]
+                                      (gameData.games.CandyCrush.levels[0]
                                         ?.pointsEarned /
-                                        gameData.games.candycrush.levels[0]
+                                        gameData.games.CandyCrush.levels[0]
                                           ?.maxPoints) *
                                       100
                                     }%`,
