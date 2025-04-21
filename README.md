@@ -17,7 +17,10 @@ Empire of Bits is revolutionizing blockchain gaming by creating a unified ecosys
 
 _[Play Now on Solana Devnet](https://www.empireofbits.fun/)_
 
-🎥 [Watch Empire of Bits Demo](/assets/empireofbits.mp4)
+<video width="800" controls>
+  <source src="../assets/empireofbits.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## 🔍 The Problem
 
