@@ -1,8 +1,8 @@
 # Empire of Bits
 
-![Status](https://img.shields.io/badge/Status-MVP%20Live-brightgreen)
-![Platform](https://img.shields.io/badge/Platform-Solana-blue)
-![Games](https://img.shields.io/badge/Games-5%2B-orange)
+[![Demo Video](https://img.shields.io/badge/Demo-Video-red)](https://x.com/empireofbits/status/1914243333301346640)
+[![excalidraw](https://img.shields.io/badge/Status-MVP%20Live-brightgreen)](https://excalidraw.com/#room=32933118cf6d6d96aa43,Emx7aPQiNLoRuUaD_ld0iQ)
+[![Games](https://img.shields.io/badge/Games-5%2B-orange)](https://www.empireofbits.fun/)
 [![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?logo=twitter)](https://x.com/empireofbits)
 
 <p align="center">
@@ -17,7 +17,7 @@ Empire of Bits is revolutionizing blockchain gaming by creating a unified ecosys
 
 _[Play Now on Solana Devnet](https://www.empireofbits.fun/)_
 
-[![Watch Empire of Bits Demo](https://img.youtube.com/vi/22gZIS_uM0M/0.jpg)](https://www.youtube.com/watch?v=22gZIS_uM0M)
+🎥 [Watch Empire of Bits Demo](/assets/empireofbits.mp4)
 
 ## 🔍 The Problem
 
