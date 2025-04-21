@@ -62,6 +62,8 @@ Our innovative vesting mechanism keeps players engaged long-term with escalating
 | Platformer                      | Live MVP    | [Play Now](https://platformer-game-delta.vercel.app/) | Side-scrolling adventure with token rewards             |
 | Car Racing                      | Development | [Preview](https://car.empireofbits.fun/)              | High-octane racing with NFT vehicles                    |
 | Axe Arcade                      | Live MVP    | [Play Now](https://axes.empireofbits.fun/)            | Skill-based throwing game with leaderboards             |
+| Space Invaders                  | Live MVP    | [Play Now](https://spaceinvader.empireofbits.fun/)    | Classic alien shooter reborn in 3D with BabylonJS       |
+|  |
 
 <p align="center">
   <a href="https://x.com/empireofbits/status/1914243333301346640">
