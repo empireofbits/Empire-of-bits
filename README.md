@@ -6,7 +6,7 @@
 [![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?logo=twitter)](https://x.com/empireofbits)
 
 <p align="center">
-  <img src="https://i.imgur.com/YourLogoHere.png" alt="Empire of Bits Logo" width="400"/>
+  <img src="https://pbs.twimg.com/profile_images/1910987472781086720/nLMbM7Fi_400x400.jpg" alt="Empire of Bits Logo" width="400"/>
 </p>
 
 > *An Interoperable Arcade Gaming Ecosystem on Solana where assets, achievements, and experiences transcend individual games.*
